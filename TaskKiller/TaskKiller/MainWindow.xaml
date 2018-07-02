@@ -24,7 +24,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GroupBox Header="GroupBox" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Foreground="White" Background="Black">
+        <GroupBox Header="Using cmd" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Foreground="White">
             <Grid Background="#333333">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="7*"/>

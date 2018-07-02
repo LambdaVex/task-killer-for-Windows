@@ -24,5 +24,16 @@ namespace TaskKiller
         {
             InitializeComponent();
         }
+
+        private void Button_KillByName(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("cmd.exe", "/C taskkill /f /t /im " + textbox_byName.Text);
+            textbox_byName.Focus();
+        }
+        private void Button_KillByID(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("cmd.exe", "/C taskkill /pid " + textbox_byID.Text + " /f");
+            textbox_byID.Focus();
+        }
     }
 }
