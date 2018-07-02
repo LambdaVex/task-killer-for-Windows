@@ -24,7 +24,43 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GroupBox Header="GroupBox" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Foreground="White">
+        <GroupBox Header="GroupBox" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Foreground="White" Background="Black">
+            <Grid Background="#333333">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="textbox_byName" 
+                Foreground="Black"
+                Grid.Column="0"
+                  Margin="5"
+                Grid.Row="0"/>
+                <TextBox x:Name="textbox_byID" 
+                Foreground="Black"
+                Grid.Column="0"
+                Margin="5"
+                Grid.Row="1"/>
+                <Button Content="Kill Process by Name"
+                Focusable="False"
+                 Margin="5"
+                Click="Button_KillByName"
+                Background="#333333"
+                Foreground="White"
+                Grid.Column="1"
+                Grid.Row="2"/>
+                <Button Content="Kill Process by ID"
+                Focusable="False"
+                Background="#333333"
+                Click="Button_KillByID"
+                Foreground="White"
+                Margin="5"
+                Grid.Column="1"
+                Grid.Row="0"/>
+            </Grid>
         </GroupBox>
     </Grid>
 </Window>
