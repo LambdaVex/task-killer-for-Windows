@@ -31,48 +31,19 @@ namespace TaskKiller
             }
         }
     }
-
     public class ProcessInfo
     {
 
         public string Name { get; set; }
         public int ID { get; set; }
     }
-    /// <summary>
-    /// Interaction logic for Processes.xaml
-    /// </summary>
     public partial class Processes : Window
     {
-        
- 
         public Processes()
         {
-
-            Process[] localAll = Process.GetProcesses();
-
-            foreach (Process element in localAll)
-            {
-                Console.WriteLine(element.ProcessName + "::" + element.Id);
-            }
-
-
-            //List<ProcessInfo> list = new List<ProcessInfo>();
-
-            //foreach (var item in localAll)
-            //{
-            //    list.Add(new ProcessInfo(item.ProcessName, item.Id));
-            //}
-
-
             DataContext = new ViewModel();
-
-           // this.dataGrid.DataContext = new ViewModel();
-
-
             InitializeComponent();
             this.Show();
-
-
         }
     }
 }
