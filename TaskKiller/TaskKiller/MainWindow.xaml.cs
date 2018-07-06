@@ -35,5 +35,11 @@ namespace TaskKiller
             System.Diagnostics.Process.Start("cmd.exe", "/C taskkill /pid " + textbox_byID.Text + " /f");
             textbox_byID.Focus();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Processes processes = new Processes();
+            processes.Show();
+        }
     }
 }

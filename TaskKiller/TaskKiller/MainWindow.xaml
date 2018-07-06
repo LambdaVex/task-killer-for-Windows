@@ -62,5 +62,17 @@
                 Grid.Row="0"/>
             </Grid>
         </GroupBox>
+
+
+        <Button Content="Show running processes"
+                Focusable="False"
+                Margin="5"
+                Click="Button_Click"
+                Background="#333333"
+                Foreground="White"
+                Grid.Column="1"
+                Grid.Row="6"/>
+
+
     </Grid>
 </Window>
