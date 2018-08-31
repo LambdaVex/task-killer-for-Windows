@@ -45,5 +45,10 @@ namespace TaskKiller
             InitializeComponent();
             this.Show();
         }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

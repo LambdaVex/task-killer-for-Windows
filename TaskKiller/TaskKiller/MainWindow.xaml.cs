@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,15 @@ namespace TaskKiller
         private void Button_KillByName(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("cmd.exe", "/C taskkill /f /t /im " + textbox_byName.Text);
+
+            //TODO <DO some testing>
+            Process[] procList = Process.GetProcessesByName(textbox_byName.Text);
+
+            foreach (Process proc in procList)
+            {
+                proc.Kill();
+            }
+                
             textbox_byName.Focus();
         }
         private void Button_KillByID(object sender, RoutedEventArgs e)

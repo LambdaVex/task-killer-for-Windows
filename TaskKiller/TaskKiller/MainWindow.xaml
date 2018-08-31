@@ -8,9 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#333333">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="352*"/>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="159*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -22,13 +23,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GroupBox Header="Using cmd" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" Foreground="White">
+        <GroupBox Header="Actions" Grid.Row="2" Grid.RowSpan="3" Foreground="White" Grid.ColumnSpan="3" Margin="158,0.2,0.4,0.2">
             <Grid Background="#333333">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="7*"/>
-                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="314*"/>
+                    <ColumnDefinition Width="139*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -37,28 +38,28 @@
                 <TextBox x:Name="textbox_byName" 
                 Foreground="Black"
                 Grid.Column="0"
-                  Margin="5"
-                Grid.Row="0"/>
+                  Margin="5,5,5,4.4"
+                Grid.Row="0" Grid.ColumnSpan="2"/>
                 <TextBox x:Name="textbox_byID" 
                 Foreground="Black"
                 Grid.Column="0"
-                Margin="5"
-                Grid.Row="1"/>
+                Margin="5,4.6,5,4.8"
+                Grid.Row="1" Grid.ColumnSpan="2"/>
                 <Button Content="Kill Process by Name"
                 Focusable="False"
-                 Margin="5"
+                 Margin="5,4.6,5.2,4.8"
                 Click="Button_KillByName"
                 Background="#333333"
                 Foreground="White"
-                Grid.Column="1"
-                Grid.Row="2"/>
+                Grid.Column="2"
+                Grid.Row="1"/>
                 <Button Content="Kill Process by ID"
                 Focusable="False"
                 Background="#333333"
                 Click="Button_KillByID"
                 Foreground="White"
-                Margin="5"
-                Grid.Column="1"
+                Margin="5,5,5.2,5.4"
+                Grid.Column="2"
                 Grid.Row="0"/>
             </Grid>
         </GroupBox>
@@ -66,12 +67,12 @@
 
         <Button Content="Show running processes"
                 Focusable="False"
-                Margin="5"
+                Margin="4.6,5.4,5.4,5"
                 Click="Button_Click"
                 Background="#333333"
                 Foreground="White"
                 Grid.Column="1"
-                Grid.Row="6"/>
+                Grid.Row="6" Grid.ColumnSpan="2"/>
 
 
     </Grid>

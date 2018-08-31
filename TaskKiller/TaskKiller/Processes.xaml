@@ -7,36 +7,21 @@
         mc:Ignorable="d"
         Title="Processes" Height="450" Width="800">
     <Grid Background="#333333">
-
-
-
         <DataGrid 
-    x:Name="dataGrid" 
-    HorizontalAlignment="Stretch" 
-    Margin="0,0,0,0" 
-    VerticalAlignment="Stretch"
-          
-    ItemsSource="{Binding Items}"
-    AutoGenerateColumns="False"
-
-    >
+            x:Name="dataGrid" 
+            HorizontalAlignment="Stretch" 
+            Margin="0,0,0,0" 
+            VerticalAlignment="Stretch"
+            ItemsSource="{Binding Items}"
+            AutoGenerateColumns="False" SelectionChanged="dataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <!-- 
-        Removed UpdateSourceTrigger=PropertyChanged because it has no effect. 
-        Removed IsReadOnly="false" because it's the default already. 
-        -->
                 <DataGridTextColumn 
-            Binding="{Binding Name}" 
-            Header="Name"
-            />
-
+                Binding="{Binding Name}" 
+                Header="Name"/>
                 <DataGridTextColumn 
-            Binding="{Binding ID}" 
-            Header="ID"
-            />
+                Binding="{Binding ID}" 
+                Header="ID"/>
             </DataGrid.Columns>
         </DataGrid>
-
-
     </Grid>
 </Window>
